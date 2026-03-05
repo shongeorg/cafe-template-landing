@@ -3,53 +3,64 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox
 if (workbox) {
   console.log('Workbox завантажено успішно! 🎉');
 
-  // Файли для попереднього кешування (щоб вони завжди були офлайн)
-  const CACHE_NAME = 'aroma-cache-v1';
+  // Назва кешу
+  const CACHE_NAME = 'aroma-cache-v2';
+
+  // ПОВНИЙ список файлів для офлайн-режиму
   const URLS_TO_CACHE = [
     '/',
     '/index.html',
     '/index.css',
     '/index.js',
     '/manifest.json',
-    '/offline.html'
+    '/offline.html',
+    // Локальні зображення
+    '/assets/hero.jpg',
+    '/assets/espresso.jpg',
+    '/assets/capuccino.jpg',
+    '/assets/latte.jpg',
+    '/assets/croissant.jpg',
+    '/assets/americano.jpg',
+    '/assets/flatwhite.jpg'
   ];
 
-  // Встановлення Service Worker і кешування критичних файлів
+  // 1. Попереднє кешування при встановленні
   self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open(CACHE_NAME)
         .then((cache) => {
-          console.log('Кешування критичних ресурсів...');
+          console.log('Кешування всіх ресурсів для офлайн-доступу...');
           return cache.addAll(URLS_TO_CACHE);
         })
+        .then(() => self.skipWaiting())
     );
   });
 
-  // Стратегія: Спочатку кеш, потім мережа (для контенту)
+  // 2. Активація та видалення старого кешу
+  self.addEventListener('activate', (event) => {
+    event.waitUntil(
+      caches.keys().then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cache) => {
+            if (cache !== CACHE_NAME) {
+              console.log('Видалення старого кешу:', cache);
+              return caches.delete(cache);
+            }
+          })
+        );
+      })
+    );
+  });
+
+  // 3. Стратегія: Stale-While-Revalidate (швидке завантаження + оновлення у фоні)
   workbox.routing.registerRoute(
-    ({request}) => request.destination === 'document' ||
-                   request.destination === 'script' ||
-                   request.destination === 'style',
+    ({request}) => true, // Кешуємо все
     new workbox.strategies.StaleWhileRevalidate({
-      cacheName: 'static-resources',
+      cacheName: 'aroma-universal-cache',
     })
   );
 
-  // Кешування зображень (з обмеженням)
-  workbox.routing.registerRoute(
-    ({request}) => request.destination === 'image',
-    new workbox.strategies.CacheFirst({
-      cacheName: 'images',
-      plugins: [
-        new workbox.expiration.ExpirationPlugin({
-          maxEntries: 60,
-          maxAgeSeconds: 30 * 24 * 60 * 60, // 30 днів
-        }),
-      ],
-    })
-  );
-
-  // Обробка офлайн-режиму
+  // 4. Обробка офлайн-переходів
   self.addEventListener('fetch', (event) => {
     if (event.request.mode === 'navigate') {
       event.respondWith(
