@@ -64,14 +64,16 @@
     </script>
 </head>
 <body>
+    <a href="#home" class="skip-link">Перейти до вмісту</a>
+
     <header class="header">
         <div class="container header__container">
-            <a href="#home" class="header__logo logo">
+            <a href="#home" class="header__logo logo" aria-label="Café Aroma - Головна">
                 <span class="logo__icon">☕</span>
                 <span class="logo__text">Café Aroma</span>
             </a>
 
-            <nav class="header__nav nav" id="nav">
+            <nav class="header__nav nav" id="nav" aria-label="Головна навігація">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Головна</a></li>
                     <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
@@ -80,7 +82,11 @@
                 </ul>
             </nav>
 
-            <button class="header__burger burger" id="burger" aria-label="Відкрити меню">
+            <button class="theme-toggle" id="theme-toggle" aria-label="Переключити тему" aria-live="polite">
+                <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
+            </button>
+
+            <button class="header__burger burger" id="burger" aria-label="Відкрити меню" aria-expanded="false" aria-controls="nav">
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
                 <span class="burger__line"></span>
@@ -88,11 +94,11 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
         <section class="hero" id="home">
             <div class="hero__bg">
-                <img src="https://images.unsplash.com/photo-1680528221511-e495d841c4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Інтер'єр затишної кав'ярні" class="hero__image">
+                <img src="https://images.unsplash.com/photo-1680528221511-e495d841c4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Інтер'єр затишної кав'ярні Café Aroma з теплим освітленням" class="hero__image">
                 <div class="hero__overlay"></div>
             </div>
             <div class="container hero__container">
@@ -115,7 +121,7 @@
                 <div class="menu__grid">
                     <article class="menu-card">
                         <div class="menu-card__image-box">
-                            <img src="https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Еспресо" class="menu-card__image">
+                            <img src="https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Чашка класичного італійського еспресо з густою пінкою" class="menu-card__image" loading="lazy">
                         </div>
                         <div class="menu-card__content">
                             <div class="menu-card__header">
@@ -128,7 +134,7 @@
 
                     <article class="menu-card">
                         <div class="menu-card__image-box">
-                            <img src="https://images.unsplash.com/photo-1667388363683-a07bbf0c84b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Капучино" class="menu-card__image">
+                            <img src="https://images.unsplash.com/photo-1667388363683-a07bbf0c84b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Капучино з малюнком на молочній піні" class="menu-card__image" loading="lazy">
                         </div>
                         <div class="menu-card__content">
                             <div class="menu-card__header">
@@ -141,7 +147,7 @@
 
                     <article class="menu-card">
                         <div class="menu-card__image-box">
-                            <img src="https://images.unsplash.com/photo-1771159978458-3df74f41a918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Латте" class="menu-card__image">
+                            <img src="https://images.unsplash.com/photo-1771159978458-3df74f41a918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Кавовий латте у великій чашці" class="menu-card__image" loading="lazy">
                         </div>
                         <div class="menu-card__content">
                             <div class="menu-card__header">
@@ -154,7 +160,7 @@
 
                     <article class="menu-card">
                         <div class="menu-card__image-box">
-                            <img src="https://images.unsplash.com/photo-1751151856149-5ebf1d21586a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Круасан" class="menu-card__image">
+                            <img src="https://images.unsplash.com/photo-1751151856149-5ebf1d21586a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Золотистий свіжоспечений французький круасан" class="menu-card__image" loading="lazy">
                         </div>
                         <div class="menu-card__content">
                             <div class="menu-card__header">
@@ -167,7 +173,7 @@
 
                     <article class="menu-card">
                         <div class="menu-card__image-box">
-                            <img src="https://images.unsplash.com/photo-1672570050756-4f1953bde478?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Американо" class="menu-card__image">
+                            <img src="https://images.unsplash.com/photo-1672570050756-4f1953bde478?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Велика чашка гарячого американо" class="menu-card__image" loading="lazy">
                         </div>
                         <div class="menu-card__content">
                             <div class="menu-card__header">
@@ -180,7 +186,7 @@
 
                     <article class="menu-card">
                         <div class="menu-card__image-box">
-                            <img src="https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Флет Вайт" class="menu-card__image">
+                            <img src="https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Флет Вайт з мікропіною" class="menu-card__image" loading="lazy">
                         </div>
                         <div class="menu-card__content">
                             <div class="menu-card__header">
@@ -204,22 +210,22 @@
 
                 <div class="features-grid">
                     <div class="feature-item">
-                        <div class="feature-item__icon-box">☕</div>
+                        <div class="feature-item__icon-box" aria-hidden="true">☕</div>
                         <h3 class="feature-item__title">Якісна кава</h3>
                         <p class="feature-item__desc">Ми використовуємо лише найкращі зерна з перевірених плантацій</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item__icon-box">❤️</div>
+                        <div class="feature-item__icon-box" aria-hidden="true">❤️</div>
                         <h3 class="feature-item__title">З любов'ю</h3>
                         <p class="feature-item__desc">Кожна чашка готується з особливою увагою до деталей</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item__icon-box">🏆</div>
+                        <div class="feature-item__icon-box" aria-hidden="true">🏆</div>
                         <h3 class="feature-item__title">Нагороди</h3>
                         <p class="feature-item__desc">Переможці міжнародних конкурсів бариста</p>
                     </div>
                     <div class="feature-item">
-                        <div class="feature-item__icon-box">👥</div>
+                        <div class="feature-item__icon-box" aria-hidden="true">👥</div>
                         <h3 class="feature-item__title">Команда</h3>
                         <p class="feature-item__desc">Досвідчені бариста з пристрастю до своєї справи</p>
                     </div>
@@ -263,22 +269,22 @@
 
                 <div class="contact-info-grid">
                     <div class="contact-info-item">
-                        <div class="contact-info-item__icon">📍</div>
+                        <div class="contact-info-item__icon" aria-hidden="true">📍</div>
                         <h3 class="contact-info-item__title">Адреса</h3>
                         <p class="contact-info-item__text">вул. Хрещатик, 25, Київ</p>
                     </div>
                     <div class="contact-info-item">
-                        <div class="contact-info-item__icon">📞</div>
+                        <div class="contact-info-item__icon" aria-hidden="true">📞</div>
                         <h3 class="contact-info-item__title">Телефон</h3>
-                        <p class="contact-info-item__text">+380 44 123 45 67</p>
+                        <p class="contact-info-item__text"><a href="tel:+380441234567" class="contact-link">+380 44 123 45 67</a></p>
                     </div>
                     <div class="contact-info-item">
-                        <div class="contact-info-item__icon">✉️</div>
+                        <div class="contact-info-item__icon" aria-hidden="true">✉️</div>
                         <h3 class="contact-info-item__title">Email</h3>
-                        <p class="contact-info-item__text">info@cafearoma.com</p>
+                        <p class="contact-info-item__text"><a href="mailto:info@cafearoma.com" class="contact-link">info@cafearoma.com</a></p>
                     </div>
                     <div class="contact-info-item">
-                        <div class="contact-info-item__icon">🕒</div>
+                        <div class="contact-info-item__icon" aria-hidden="true">🕒</div>
                         <h3 class="contact-info-item__title">Години роботи</h3>
                         <p class="contact-info-item__text">Пн-Нд: 8:00 - 22:00</p>
                     </div>
@@ -305,7 +311,7 @@
                             <label for="message" class="contact-form__label">Повідомлення</label>
                             <textarea id="message" rows="5" class="contact-form__textarea" placeholder="Ваше повідомлення..." required></textarea>
                         </div>
-                        <button type="submit" class="button button--primary button--full">Відправити</button>
+                        <button type="submit" class="button button--primary button--full">Відправити повідомлення</button>
                     </form>
                 </div>
             </div>
@@ -317,14 +323,14 @@
             <div class="footer__grid">
                 <div class="footer__brand">
                     <div class="logo logo--light footer__logo">
-                        <span class="logo__icon">☕</span>
+                        <span class="logo__icon" aria-hidden="true">☕</span>
                         <span class="logo__text">Café Aroma</span>
                     </div>
                     <p class="footer__desc">Найкраща кава в місті з 2015 року. Приходьте за незабутнім смаком та атмосферою.</p>
                 </div>
 
                 <div class="footer__links">
-                    <h3 class="footer__title">Швидкі посилання</h3>
+                    <h2 class="footer__title">Швидкі посилання</h2>
                     <ul class="footer__list">
                         <li><a href="#home" class="footer__link">Головна</a></li>
                         <li><a href="#menu" class="footer__link">Меню</a></li>
@@ -334,11 +340,11 @@
                 </div>
 
                 <div class="footer__social">
-                    <h3 class="footer__title">Слідкуйте за нами</h3>
+                    <h2 class="footer__title">Слідкуйте за нами</h2>
                     <div class="social-icons">
-                        <a href="#" class="social-link" aria-label="Facebook">FB</a>
-                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
-                        <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                        <a href="#" class="social-link" aria-label="Ми у Facebook">FB</a>
+                        <a href="#" class="social-link" aria-label="Ми в Instagram">IG</a>
+                        <a href="#" class="social-link" aria-label="Ми у Twitter">TW</a>
                     </div>
                 </div>
             </div>
