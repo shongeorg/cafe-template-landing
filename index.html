@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Café Aroma — Найкраща кава та випічка у Києві</title>
+    <meta name="description" content="Завітайте до Café Aroma за справжньою італійською кавою та свіжою випічкою. Затишна атмосфера, професійні бариста та найкращий сервіс у центрі міста.">
+    <meta name="keywords" content="кав'ярня київ, де випити каву, кафе арома, еспресо, капучино, круасани, свіжа випічка">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cafearoma.com.ua/">
+    <meta property="og:title" content="Café Aroma — Найкраща кава та випічка у Києві">
+    <meta property="og:description" content="Завітайте до Café Aroma за справжньою італійською кавою та свіжою випічкою.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1680528221511-e495d841c4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Café Aroma — Найкраща кава та випічка у Києві">
+    <meta property="twitter:description" content="Завітайте до Café Aroma за справжньою італійською кавою та свіжою випічкою.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>☕</text></svg>">
+    
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Café Aroma",
+      "image": "https://images.unsplash.com/photo-1680528221511-e495d841c4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "вул. Хрещатик, 25",
+        "addressLocality": "Київ",
+        "postalCode": "01001",
+        "addressCountry": "UA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 50.4501,
+        "longitude": 30.5234
+      },
+      "url": "https://cafearoma.com.ua",
+      "telephone": "+380441234567",
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "08:00",
+        "closes": "22:00"
+      },
+      "priceRange": "$$"
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="#home" class="header__logo logo">
+                <span class="logo__icon">☕</span>
+                <span class="logo__text">Café Aroma</span>
+            </a>
+
+            <nav class="header__nav nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Головна</a></li>
+                    <li class="nav__item"><a href="#menu" class="nav__link">Меню</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Про нас</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Контакти</a></li>
+                </ul>
+            </nav>
+
+            <button class="header__burger burger" id="burger" aria-label="Відкрити меню">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero__bg">
+                <img src="https://images.unsplash.com/photo-1680528221511-e495d841c4e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Інтер'єр затишної кав'ярні" class="hero__image">
+                <div class="hero__overlay"></div>
+            </div>
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">Ласкаво просимо до Café Aroma</h1>
+                    <p class="hero__subtitle">Найкраща кава в місті, приготована з любов'ю</p>
+                    <a href="#menu" class="button button--primary hero__button">Переглянути меню</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="menu" id="menu">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Наше меню</h2>
+                    <p class="section-subtitle">Відкрийте для себе нашу колекцію найкращих напоїв та випічки</p>
+                </div>
+
+                <div class="menu__grid">
+                    <article class="menu-card">
+                        <div class="menu-card__image-box">
+                            <img src="https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Еспресо" class="menu-card__image">
+                        </div>
+                        <div class="menu-card__content">
+                            <div class="menu-card__header">
+                                <h3 class="menu-card__title">Еспресо</h3>
+                                <span class="menu-card__price">45 грн</span>
+                            </div>
+                            <p class="menu-card__desc">Класичний італійський еспресо з насиченим смаком</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-card__image-box">
+                            <img src="https://images.unsplash.com/photo-1667388363683-a07bbf0c84b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Капучино" class="menu-card__image">
+                        </div>
+                        <div class="menu-card__content">
+                            <div class="menu-card__header">
+                                <h3 class="menu-card__title">Капучино</h3>
+                                <span class="menu-card__price">65 грн</span>
+                            </div>
+                            <p class="menu-card__desc">Ніжна молочна піна з ароматною кавою</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-card__image-box">
+                            <img src="https://images.unsplash.com/photo-1771159978458-3df74f41a918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Латте" class="menu-card__image">
+                        </div>
+                        <div class="menu-card__content">
+                            <div class="menu-card__header">
+                                <h3 class="menu-card__title">Латте</h3>
+                                <span class="menu-card__price">70 грн</span>
+                            </div>
+                            <p class="menu-card__desc">М'який смак кави з великою кількістю молока</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-card__image-box">
+                            <img src="https://images.unsplash.com/photo-1751151856149-5ebf1d21586a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Круасан" class="menu-card__image">
+                        </div>
+                        <div class="menu-card__content">
+                            <div class="menu-card__header">
+                                <h3 class="menu-card__title">Круасан</h3>
+                                <span class="menu-card__price">55 грн</span>
+                            </div>
+                            <p class="menu-card__desc">Французький круасан зі свіжого тіста</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-card__image-box">
+                            <img src="https://images.unsplash.com/photo-1672570050756-4f1953bde478?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Американо" class="menu-card__image">
+                        </div>
+                        <div class="menu-card__content">
+                            <div class="menu-card__header">
+                                <h3 class="menu-card__title">Американо</h3>
+                                <span class="menu-card__price">50 грн</span>
+                            </div>
+                            <p class="menu-card__desc">Подовжений еспресо з м'яким смаком</p>
+                        </div>
+                    </article>
+
+                    <article class="menu-card">
+                        <div class="menu-card__image-box">
+                            <img src="https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Флет Вайт" class="menu-card__image">
+                        </div>
+                        <div class="menu-card__content">
+                            <div class="menu-card__header">
+                                <h3 class="menu-card__title">Флет Вайт</h3>
+                                <span class="menu-card__price">75 грн</span>
+                            </div>
+                            <p class="menu-card__desc">Австралійська кава з мікропіною</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Про нас</h2>
+                    <p class="section-subtitle">Café Aroma – це більше, ніж просто кав'ярня. Це місце, де традиції зустрічаються з інноваціями.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-item__icon-box">☕</div>
+                        <h3 class="feature-item__title">Якісна кава</h3>
+                        <p class="feature-item__desc">Ми використовуємо лише найкращі зерна з перевірених плантацій</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon-box">❤️</div>
+                        <h3 class="feature-item__title">З любов'ю</h3>
+                        <p class="feature-item__desc">Кожна чашка готується з особливою увагою до деталей</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon-box">🏆</div>
+                        <h3 class="feature-item__title">Нагороди</h3>
+                        <p class="feature-item__desc">Переможці міжнародних конкурсів бариста</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-item__icon-box">👥</div>
+                        <h3 class="feature-item__title">Команда</h3>
+                        <p class="feature-item__desc">Досвідчені бариста з пристрастю до своєї справи</p>
+                    </div>
+                </div>
+
+                <div class="history-block">
+                    <div class="history-block__content">
+                        <h3 class="history-block__title">Наша історія</h3>
+                        <p>Заснована у 2015 році, Café Aroma почалася як невелика сімейна кав'ярня з великою мрією – принести найкращу каву в наше місто.</p>
+                        <p>Сьогодні ми пишаємося тим, що стали улюбленим місцем для тисяч людей, які цінують справжню якість та затишну атмосферу.</p>
+                    </div>
+                    <div class="history-block__stats stats">
+                        <div class="stats__item">
+                            <div class="stats__number">8+</div>
+                            <div class="stats__label">Років досвіду</div>
+                        </div>
+                        <div class="stats__item">
+                            <div class="stats__number">50K+</div>
+                            <div class="stats__label">Задоволених гостей</div>
+                        </div>
+                        <div class="stats__item">
+                            <div class="stats__number">15+</div>
+                            <div class="stats__label">Видів кави</div>
+                        </div>
+                        <div class="stats__item">
+                            <div class="stats__number">100%</div>
+                            <div class="stats__label">Натуральна кава</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Контакти</h2>
+                    <p class="section-subtitle">Завітайте до нас або зв'яжіться будь-яким зручним способом</p>
+                </div>
+
+                <div class="contact-info-grid">
+                    <div class="contact-info-item">
+                        <div class="contact-info-item__icon">📍</div>
+                        <h3 class="contact-info-item__title">Адреса</h3>
+                        <p class="contact-info-item__text">вул. Хрещатик, 25, Київ</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-item__icon">📞</div>
+                        <h3 class="contact-info-item__title">Телефон</h3>
+                        <p class="contact-info-item__text">+380 44 123 45 67</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-item__icon">✉️</div>
+                        <h3 class="contact-info-item__title">Email</h3>
+                        <p class="contact-info-item__text">info@cafearoma.com</p>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-item__icon">🕒</div>
+                        <h3 class="contact-info-item__title">Години роботи</h3>
+                        <p class="contact-info-item__text">Пн-Нд: 8:00 - 22:00</p>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <h3 class="contact-form-box__title">Напишіть нам</h3>
+                    <form class="contact-form">
+                        <div class="contact-form__row">
+                            <div class="contact-form__group">
+                                <label for="name" class="contact-form__label">Ім'я</label>
+                                <input type="text" id="name" class="contact-form__input" placeholder="Ваше ім'я" required>
+                            </div>
+                            <div class="contact-form__group">
+                                <label for="email" class="contact-form__label">Email</label>
+                                <input type="email" id="email" class="contact-form__input" placeholder="your@email.com" required>
+                            </div>
+                        </div>
+                        <div class="contact-form__group">
+                            <label for="subject" class="contact-form__label">Тема</label>
+                            <input type="text" id="subject" class="contact-form__input" placeholder="Тема повідомлення">
+                        </div>
+                        <div class="contact-form__group">
+                            <label for="message" class="contact-form__label">Повідомлення</label>
+                            <textarea id="message" rows="5" class="contact-form__textarea" placeholder="Ваше повідомлення..." required></textarea>
+                        </div>
+                        <button type="submit" class="button button--primary button--full">Відправити</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="logo logo--light footer__logo">
+                        <span class="logo__icon">☕</span>
+                        <span class="logo__text">Café Aroma</span>
+                    </div>
+                    <p class="footer__desc">Найкраща кава в місті з 2015 року. Приходьте за незабутнім смаком та атмосферою.</p>
+                </div>
+
+                <div class="footer__links">
+                    <h3 class="footer__title">Швидкі посилання</h3>
+                    <ul class="footer__list">
+                        <li><a href="#home" class="footer__link">Головна</a></li>
+                        <li><a href="#menu" class="footer__link">Меню</a></li>
+                        <li><a href="#about" class="footer__link">Про нас</a></li>
+                        <li><a href="#contact" class="footer__link">Контакти</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer__social">
+                    <h3 class="footer__title">Слідкуйте за нами</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-link" aria-label="Facebook">FB</a>
+                        <a href="#" class="social-link" aria-label="Instagram">IG</a>
+                        <a href="#" class="social-link" aria-label="Twitter">TW</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>&copy; 2026 Café Aroma. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
