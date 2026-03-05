@@ -1,0 +1,21 @@
+{
+  "name": "Café Aroma",
+  "short_name": "Aroma",
+  "description": "Найкраща кава та випічка у Києві",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#78350f",
+  "icons": [
+    {
+      "src": "https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=192",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://images.unsplash.com/photo-1649015005461-9905cb2a183d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=512",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

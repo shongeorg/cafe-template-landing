@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // PWA Service Worker Registration
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').then(registration => {
+                console.log('ServiceWorker зареєстровано: ', registration.scope);
+            }, err => {
+                console.log('ServiceWorker помилка реєстрації: ', err);
+            });
+        });
+    }
+
     // Theme Toggle Logic
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = themeToggle.querySelector('.theme-toggle__icon');
