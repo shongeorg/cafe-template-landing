@@ -1,0 +1,15 @@
+{
+  "name": "cafe-template",
+  "version": "1.0.0",
+  "description": "Професійний шаблон для простого лендінгу з підтримкою PWA, SEO та темної теми.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx live-server --port=8081",
+    "test": "npx playwright test --reporter=json > raports/test-results.json",
+    "test:report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.1",
+    "@playwright/test": "^1.58.2"
+  }
+}
